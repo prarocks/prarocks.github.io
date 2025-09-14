@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>This is my GitHub Pages website.</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Your Name</h1>
+            <p>Your Tagline (e.g., Web Developer & Designer)</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="your-photo.jpg" alt="Your Photo" class="profile-photo"> <!-- Upload your photo and replace src -->
+        <p>Your Bio: Write a short paragraph about yourself, your experience, and passions. For example, "I'm a passionate developer with experience in web technologies, having completed several projects in HTML, CSS, and more."</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <span>HTML/CSS</span>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            <span>90%</span>
+        </div>
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+            <span>70%</span>
+        </div>
+        <div class="skill">
+            <span>Python</span>
+            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+            <span>80%</span>
+        </div>
+        <!-- Add more skills as needed -->
+    </section>
+
+    <section id="works">
+        <h2>Works I've Done</h2>
+        <div class="works-grid">
+            <div class="work-card">
+                <img src="project1.jpg" alt="Project 1"> <!-- Upload project images -->
+                <h3>Project 1 Name</h3>
+                <p>Description: A brief overview of the project, technologies used, and what you achieved.</p>
+                <a href="https://link-to-project.com" target="_blank">View Project</a>
+            </div>
+            <div class="work-card">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2 Name</h3>
+                <p>Description: Another project details.</p>
+                <a href="https://link-to-project.com" target="_blank">View Project</a>
+            </div>
+            <!-- Add more cards for additional works -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace with your Formspree endpoint for email functionality -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p>Or email me at: your.email@example.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
