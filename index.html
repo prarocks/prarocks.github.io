@@ -1,154 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prasanna Dahal - Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prasanna Dahal's Portfolio - Civil Engineer specializing in Water Resources and Remote Sensing">
+    <title>Prasanna Dahal - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hero">
-      <h1>Prasanna Dahal</h1>
-      <p>Civil Engineer | Water Resources & Remote Sensing</p>
-    </div>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Prasanna Dahal</h1>
+            <p>Civil Engineer | Water Resources & Remote Sensing</p>
+        </div>
+    </header>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="images/mypicture.jpg" alt="Prasanna Dahal" class="profile-photo">
-    <p>
-      Civil engineer specializing in <strong>water resources</strong>, with expertise in 
-      precipitation analysis, runoff modeling, drought assessment, and remote sensing 
-      for agricultural and hydrological applications.
-    </p>
-  </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="profile.jpg" alt="Prasanna Dahal" class="profile-photo">
+        <p>Civil engineer specializing in water resources, with expertise in precipitation analysis, runoff modeling, drought assessment, and remote sensing for agricultural and hydrological applications.</p>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>SWAT / SWAT+</li>
-      <li>Google Earth Engine (GEE)</li>
-      <li>AquaCrop</li>
-      <li>Python</li>
-      <li>R</li>
-      <li>AutoCAD</li>
-      <li>Time Series Analysis</li>
-      <li>Remote Sensing & GIS</li>
-    </ul>
-  </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>SWAT / SWAT+</li>
+            <li>Google Earth Engine (GEE)</li>
+            <li>AquaCrop</li>
+            <li>Python</li>
+            <li>R</li>
+            <li>AutoCAD</li>
+            <li>Time Series Analysis</li>
+            <li>Remote Sensing & GIS</li>
+        </ul>
+    </section>
 
-  <!-- Works -->
-  <section id="works">
-    <h2>Works I've Done</h2>
-    <div class="works-grid">
-      
-      <!-- Project 1 -->
-      <div class="work-card">
-        <h3>PDIR Product Bias Correction</h3>
-        <p>
-          Collaborated with Dr. Kuo-Lin-Hsu (UC Irvine) to improve PDIR satellite precipitation 
-          data using machine learning and topographical parameters (slope, aspect, elevation).
-        </p>
-        <p>
-          <strong>Work Done:</strong> Compared PDIR pixel values with gauge observations, 
-          incorporating orographic effects in the Nepal Himalaya.<br>
-          <strong>Achievements:</strong> Improved accuracy for light & medium precipitation; 
-          strong seasonal performance.<br>
-          <strong>Key Learnings:</strong> Extreme rainfall remains challenging due to PDIR 
-          limitations, missing data, and coarse resolution (4 km × 4 km).<br>
-          <strong>Future Work:</strong> Further refinement of corrections for high-intensity 
-          events is ongoing.
-        </p>
-      </div>
+    <section id="works">
+        <h2>Works I've Done</h2>
+        <div class="works-grid">
+            <div class="work-card">
+                <img src="pdir_project.jpg" alt="PDIR Product Bias Correction">
+                <h3>PDIR Product Bias Correction</h3>
+                <p>Collaborated with Dr. Kuo-Lin-Hsu (UC Irvine) to improve PDIR satellite precipitation data using machine learning and topographical parameters (slope, aspect, elevation). Compared PDIR pixel values with gauge observations in the Nepal Himalaya. Improved accuracy for light and medium precipitation with strong seasonal performance. Learned that extreme rainfall remains challenging due to PDIR limitations, missing data, and coarse resolution (4 km × 4 km). Ongoing work focuses on refining corrections for high-intensity events.</p>
+            </div>
+            <div class="work-card">
+                <img src="watershed_project.jpg" alt="Watershed Modelling">
+                <h3>Watershed Modelling for Irrigation Sustainability</h3>
+                <p>Conducted watershed modelling in the Kankai and Rapti River basins using SWAT to assess irrigation sustainability under climate scenarios (SSP2-4.5 & SSP5-8.5). Simulated hydrology and built a monsoon spring dynamics model. Found reduced runoff in SSP2-4.5 and higher peak flows but declining baseflow in SSP5-8.5, highlighting dual challenges of flood management in monsoon and irrigation needs in dry seasons.</p>
+            </div>
+            <div class="work-card">
+                <img src="drought_project.jpg" alt="Drought Analysis">
+                <h3>Drought Analysis and Agricultural Water Needs</h3>
+                <p>Analyzed meteorological drought impacts on Net Irrigation Water Requirement (NIWR) using 1985–2024 data. Derived SPI/SPEI indices and simulated NIWR with AquaCrop for maize, paddy, and wheat. Found significant irrigation demand increases during droughts and established a strong link between meteorological drought, irrigation needs, and system Factor of Safety (FOS).</p>
+            </div>
+            <div class="work-card">
+                <img src="niwr_project.jpg" alt="Seasonal NIWR Prediction">
+                <h3>Seasonal NIWR Prediction Using Satellite Data</h3>
+                <p>Built a seasonal NIWR prediction model (2000–2024) for crops in Chitwan, Nepal using AquaCrop and MODIS-based drought indices (LST, ESI). Calibrated Random Forest (R² = 0.83), validated (R² = 0.72), and predicted NIWR for 2020–2023 (R² = 0.74). The satellite-only approach enabled early drought detection and improved water planning.</p>
+            </div>
+        </div>
+    </section>
 
-      <!-- Project 2 -->
-      <div class="work-card">
-        <h3>Watershed Modelling for Irrigation Sustainability</h3>
-        <p>
-          Conducted watershed modelling in the Kankai and Rapti River basins using SWAT to 
-          assess the sustainability of irrigation projects under different climate scenarios 
-          (SSP2-4.5 & SSP5-8.5).
-        </p>
-        <p>
-          <strong>Work Done:</strong> Simulated hydrology under future climates and built a 
-          monsoon-spring dynamics model.<br>
-          <strong>Findings:</strong> SSP2-4.5 → reduced runoff; SSP5-8.5 → higher peak flows, 
-          but declining baseflow.<br>
-          <strong>Implications:</strong> Highlights dual challenges of flood management in 
-          monsoon and irrigation needs in dry seasons.
-        </p>
-      </div>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p>Or email me at: prasanna1dahal@example.com</p>
+        <p><a href="https://github.com/prarocks" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/prasanna-dahal" target="_blank">LinkedIn</a></p>
+    </section>
 
-      <!-- Project 3 -->
-      <div class="work-card">
-        <h3>Drought Analysis and Agricultural Water Needs</h3>
-        <p>
-          Analyzed the impact of meteorological droughts on Net Irrigation Water Requirement (NIWR) 
-          using historical data (1985–2024). Drought indices (SPI, SPEI) were derived and NIWR 
-          simulated with AquaCrop for maize, paddy, and wheat.
-        </p>
-        <p>
-          <strong>Work Done:</strong> Compared NIWR in drought vs normal seasons; calculated 
-          Factor of Safety (FOS) for irrigation.<br>
-          <strong>Key Observations:</strong> Drought periods raised irrigation demand 
-          significantly.<br>
-          <strong>Outcome:</strong> Established strong link between meteorological drought, 
-          irrigation needs, and system FOS.
-        </p>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="work-card">
-        <h3>Seasonal NIWR Prediction Using Satellite Data</h3>
-        <p>
-          Built a seasonal-scale NIWR prediction model (2000–2024) for crops in Chitwan, Nepal 
-          using AquaCrop and MODIS-based drought indices (LST, ESI).
-        </p>
-        <p>
-          <strong>Work Done:</strong> Calibrated Random Forest (R² = 0.83), validated (R² = 0.72), 
-          predicted NIWR 2020–2023 (R² = 0.74).<br>
-          <strong>Motivation:</strong> Limited ground data (2016–2019) inspired satellite-only 
-          approach.<br>
-          <strong>Application:</strong> NIWR trends from MODIS enable early drought detection and 
-          better water planning.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-      
-      <button type="submit">Send</button>
-    </form>
-    <p>Or email me at: <a href="mailto:prasanna1dahal@example.com">prasanna1dahal@example.com</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Prasanna Dahal. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Prasanna Dahal. All rights reserved.</p>
+    </footer>
 </body>
 </html>
