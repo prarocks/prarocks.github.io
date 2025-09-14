@@ -58,8 +58,8 @@ h2 {
 .profile-photo {
     display: block;
     margin: 0 auto 20px;
-    width: 300px;
-    border-radius: 90%;
+    width: 200px;
+    border-radius: 50%;
 }
 
 /* Skills */
