@@ -46,13 +46,13 @@ nav ul li a {
 
 /* Sections */
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 2em;
 }
 .profile-photo {
@@ -66,7 +66,7 @@ h2 {
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     justify-content: center;
 }
 .skills-list li {
@@ -100,29 +100,39 @@ h2 {
 /* Works */
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 .work-card {
     background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    text-align: left;
 }
 .work-card img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
-.work-card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #007bff;
-    color: #fff;
-    border-radius: 5px;
+.work-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+.work-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+.work-card ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.work-card li {
+    font-size: 0.95em;
+    margin-bottom: 8px;
 }
 
 /* Contact */
@@ -175,5 +185,11 @@ footer {
     }
     .education-grid {
         grid-template-columns: 1fr;
+    }
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+    .work-card img {
+        height: 150px;
     }
 }
