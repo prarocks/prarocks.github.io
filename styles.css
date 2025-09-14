@@ -56,11 +56,10 @@ h2 {
     font-size: 2em;
 }
 .profile-photo {
-    width: 300px;      /* adjust size */
-    height: auto;      /* maintain aspect ratio */
-    border-radius: 10px;  /* rounded corners, 50% for circle */
-    display: block;    /* optional: makes spacing cleaner */
-    margin: 10px 0;    /* optional: spacing around image */
+    display: block;
+    margin: 0 auto 20px;
+    width: 300px;
+    border-radius: 90%;
 }
 
 /* Skills */
