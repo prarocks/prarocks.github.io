@@ -67,22 +67,21 @@
     </section>
 
     <section id="works">
-        <h2>Some of my Research Works </h2>
+        <h2>Some of my Research Works</h2>
         <div class="works-grid">
             <div class="work-card">
-                 <img src="images/PDIR.png" alt="PDIR Product Bias Correction">
+                <img src="images/PDIR.png" alt="PDIR Product Bias Correction">
                 <h3>PDIR Product Bias Correction</h3>
                 <p>Collaborated with Dr. Kuo-Lin-Hsu (UC Irvine) to enhance PDIR satellite precipitation data.</p>
                 <ul>
                     <li>Used machine learning and topographical parameters (slope, aspect, elevation).</li>
-                    <li>Compared PDIR pixel values with gauge observations at the same pixel location</li>
+                    <li>Compared PDIR pixel values with gauge observations at the same pixel location.</li>
                     <li>Improved accuracy for light and medium precipitation; strong seasonal performance.</li>
-                    <li>Correction of Extreme rainfall event is challenging due to PDIR limitations (4 km × 4 km resolution).</li>
+                    <li>Correction of extreme rainfall events is challenging due to PDIR limitations (4 km × 4 km resolution).</li>
                     <li>Ongoing: Refining corrections for high-intensity events.</li>
                 </ul>
             </div>
             <div class="work-card">
-                
                 <img src="images/kankai.png" alt="Watershed Modelling">
                 <h3>Watershed Modelling for Irrigation Sustainability</h3>
                 <p>Assessed irrigation sustainability in Kankai and Rapti River basins using SWAT.</p>
@@ -94,14 +93,14 @@
                 </ul>
             </div>
             <div class="work-card">
-                 <img src="images/Mahakali.png" alt="Drought Analysis">
+                <img src="images/Mahakali.png" alt="Drought Analysis">
                 <h3>Drought Analysis and Agricultural Water Needs</h3>
                 <p>Studied meteorological drought impacts on Net Irrigation Water Requirement (NIWR).</p>
                 <ul>
                     <li>Used 1985–2024 data, derived SPI/SPEI indices.</li>
                     <li>Simulated NIWR with AquaCrop for maize, paddy, and wheat.</li>
                     <li>Correlation among irrigation demand and meteorological droughts was found.</li>
-                    <li>The result was used to Factor of Safety of irrigation system. </li>
+                    <li>The result was used to calculate Factor of Safety of irrigation system.</li>
                 </ul>
             </div>
             <div class="work-card">
@@ -119,23 +118,64 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/xyzdaywj" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/xyzdaywj" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
+            <button type="submit" id="submit-button">Send</button>
         </form>
-        <p> </p>
-        <p> </p>
-        <p> You can Email me at: prasanna1dahal@gmail.com</p>
-        <p><a href="https://github.com/prarocks" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/prasanna-dahal-2b2744238/" target="_blank">LinkedIn</a></p>
+        <div class="contact-links">
+            <p>Email: <a href="mailto:prasanna1dahal@gmail.com">prasanna1dahal@gmail.com</a></p>
+            <p><a href="https://github.com/prarocks" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/prasanna-dahal-2b2744238/" target="_blank">LinkedIn</a></p>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Prasanna Dahal. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const form = this;
+            const button = document.getElementById('submit-button');
+            button.disabled = true;
+            button.textContent = 'Sending...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    button.textContent = 'Sent';
+                    form.reset();
+                    setTimeout(() => {
+                        button.textContent = 'Send';
+                        button.disabled = false;
+                    }, 20000);
+                } else {
+                    button.textContent = 'Error';
+                    setTimeout(() => {
+                        button.textContent = 'Send';
+                        button.disabled = false;
+                    }, 2000);
+                }
+            } catch (error) {
+                button.textContent = 'Error';
+                setTimeout(() => {
+                    button.textContent = 'Send';
+                    button.disabled = false;
+                }, 2000);
+            }
+        });
+    </script>
 </body>
 </html>
