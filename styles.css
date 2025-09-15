@@ -53,13 +53,25 @@ section {
 h2 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 2.3em;
+    font-size: 2em;
 }
+
+/* About */
 .profile-photo {
     display: block;
     margin: 0 auto 20px;
     width: 200px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 50%;
+    border: 2px solid #ddd;
+}
+#about p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Skills */
@@ -112,10 +124,13 @@ h2 {
 }
 .work-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    display: block;
+    border: 1px solid #ddd;
 }
 .work-card h3 {
     font-size: 1.5em;
@@ -139,25 +154,60 @@ h2 {
 form {
     max-width: 600px;
     margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 15px 0 5px;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 input, textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1em;
+}
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 button {
-    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    padding: 12px;
     background: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.1em;
+}
+button:hover {
+    background: #0056b3;
+}
+button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+.contact-links {
+    text-align: center;
+    margin-top: 20px;
+}
+.contact-links p {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+.contact-links a {
+    color: #007bff;
+}
+.contact-links a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -190,6 +240,43 @@ footer {
         grid-template-columns: 1fr;
     }
     .work-card img {
+        max-width: 100%;
+        height: auto;
+    }
+    form {
+        padding: 15px;
+        max-width: 100%;
+    }
+    input, textarea {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    textarea {
+        min-height: 100px;
+    }
+    button {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+@media (max-width: 480px) {
+    section {
+        padding: 30px 15px;
+    }
+    .hero h1 {
+        font-size: 1.8em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .profile-photo {
+        width: 150px;
         height: 150px;
+    }
+    #about p {
+        font-size: 1em;
+    }
+    label {
+        font-size: 1em;
     }
 }
