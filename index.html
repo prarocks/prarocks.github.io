@@ -60,7 +60,7 @@
             </div>
             <div class="education-card">
                 <h3>Research Intern</h3>
-                <p>Center for Water Resource Studies, IOE</p>
+                <p>Center for Water Resource Engineering, IOE</p>
                 <p>April 2025 – Present</p>
             </div>
         </div>
@@ -70,7 +70,7 @@
         <h2>Some of my Research Works</h2>
         <div class="works-grid">
             <div class="work-card">
-                <img src="images/PDIR.png" alt="PDIR Product Bias Correction">
+                <img src="images/PDIR.png" alt="PDIR Product Bias Correction" class="work-image" onclick="openModal('images/PDIR.png')">
                 <h3>PDIR Product Bias Correction</h3>
                 <p>Collaborated with Dr. Kuo-Lin-Hsu (UC Irvine) to enhance PDIR satellite precipitation data.</p>
                 <ul>
@@ -82,7 +82,7 @@
                 </ul>
             </div>
             <div class="work-card">
-                <img src="images/kankai.png" alt="Watershed Modelling">
+                <img src="images/kankai.png" alt="Watershed Modelling" class="work-image" onclick="openModal('images/kankai.png')">
                 <h3>Watershed Modelling for Irrigation Sustainability</h3>
                 <p>Assessed irrigation sustainability in Kankai and Rapti River basins using SWAT.</p>
                 <ul>
@@ -93,7 +93,7 @@
                 </ul>
             </div>
             <div class="work-card">
-                <img src="images/Mahakali.png" alt="Drought Analysis">
+                <img src="images/Mahakali.png" alt="Drought Analysis" class="work-image" onclick="openModal('images/Mahakali.png')">
                 <h3>Drought Analysis and Agricultural Water Needs</h3>
                 <p>Studied meteorological drought impacts on Net Irrigation Water Requirement (NIWR).</p>
                 <ul>
@@ -104,7 +104,7 @@
                 </ul>
             </div>
             <div class="work-card">
-                <img src="images/NIWR_SPEI3_monsoon_separate.png" alt="Seasonal NIWR Prediction">
+                <img src="images/NIWR_SPEI3_monsoon_separate.png" alt="Seasonal NIWR Prediction" class="work-image" onclick="openModal('images/NIWR_SPEI3_monsoon_separate.png')">
                 <h3>Seasonal NIWR Prediction Using Satellite Data</h3>
                 <p>Developed a model for crop NIWR in Chitwan, Nepal (2000–2024).</p>
                 <ul>
@@ -113,6 +113,10 @@
                     <li>Enabled early drought detection and improved water planning to ensure maximum crop yield.</li>
                 </ul>
             </div>
+        </div>
+        <div id="imageModal" class="modal">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-content" src="">
         </div>
     </section>
 
@@ -138,6 +142,7 @@
     </footer>
 
     <script>
+        // Formspree AJAX submission
         document.getElementById('contact-form').addEventListener('submit', async function(event) {
             event.preventDefault();
             const form = this;
@@ -174,6 +179,27 @@
                 }, 2000);
             }
         });
+
+        // Modal for image enhancement
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
     </script>
 </body>
 </html>
