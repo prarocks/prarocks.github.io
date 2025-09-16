@@ -73,31 +73,18 @@
     <section id="works">
         <h2>Some of my Research Works</h2>
         <div class="works-grid">
-            
             <div class="work-card">
-                <img src="images/Mahakali.png" alt="Drought Analysis" class="work-image" onclick="openModal('images/Mahakali.png')">
-                <h3>Drought Analysis and Agricultural Water Needs</h3>
-                <p>Studied meteorological drought impacts on Net Irrigation Water Requirement (NIWR).</p>
+                <img src="images/PDIR1.png" alt="PDIR Product Bias Correction" class="work-image" onclick="openModal('images/PDIR.png')">
+                <h3>PDIR Product Bias Correction</h3>
+                <p>Collaborated with Dr. Kuo-Lin-Hsu (UC Irvine) to enhance PDIR satellite precipitation data.</p>
                 <ul>
-                    <li>Used 1985–2024 data, derived SPI/SPEI indices.</li>
-                    <li>Simulated NIWR with AquaCrop for maize, paddy, and wheat.</li>
-                    <li>Correlation among irrigation demand and meteorological droughts was found.</li>
-                    <li>The result was used to calculate Factor of Safety of irrigation system.</li>
+                    <li>Used machine learning and topographical parameters (slope, aspect, elevation).</li>
+                    <li>Compared PDIR pixel values with gauge observations at the same pixel location.</li>
+                    <li>Improved accuracy for light and medium precipitation; strong seasonal performance.</li>
+                    <li>Correction of extreme rainfall events is challenging due to PDIR limitations (4 km × 4 km resolution).</li>
+                    <li>Ongoing: Refining corrections for high-intensity events.</li>
                 </ul>
             </div>
-            
-            <div class="work-card">
-                <img src="images/NIWR_SPEI3_monsoon_separate.png" alt="Seasonal NIWR Prediction" class="work-image" onclick="openModal('images/NIWR_SPEI3_monsoon_separate.png')">
-                <h3>Seasonal NIWR Prediction Using Satellite Data</h3>
-                <p>Developed a model for crop NIWR in Chitwan, Nepal (2000–2024).</p>
-                <ul>
-                    <li>Used AquaCrop and MODIS-based drought indices (LST, ESI).</li>
-                    <li>Calibrated Random Forest (R² = 0.83), validated (R² = 0.72), predicted 2020–2023 (R² = 0.74).</li>
-                    <li>Enabled early drought detection and improved water planning to ensure maximum crop yield.</li>
-                </ul>
-            </div>
-            
-
             <div class="work-card">
                 <img src="images/kankai.png" alt="Watershed Modelling" class="work-image" onclick="openModal('images/kankai.png')">
                 <h3>Watershed Modelling for Irrigation Sustainability</h3>
@@ -109,20 +96,27 @@
                     <li>Simulation shows imminent flood management and irrigation challenges.</li>
                 </ul>
             </div>
-
             <div class="work-card">
-                <img src="images/PDIR.png" alt="PDIR Product Bias Correction" class="work-image" onclick="openModal('images/PDIR.png')">
-                <h3>PDIR Product Bias Correction</h3>
-                <p>Collaborated with Dr. Kuo-Lin-Hsu (UC Irvine) to enhance PDIR satellite precipitation data.</p>
+                <img src="images/Mahakali.png" alt="Drought Analysis" class="work-image" onclick="openModal('images/Mahakali.png')">
+                <h3>Drought Analysis and Agricultural Water Needs</h3>
+                <p>Studied meteorological drought impacts on Net Irrigation Water Requirement (NIWR).</p>
                 <ul>
-                    <li>Used machine learning and topographical parameters (slope, aspect, elevation).</li>
-                    <li>Compared PDIR pixel values with gauge observations at the same pixel location.</li>
-                    <li>Improved accuracy for light and medium precipitation; strong seasonal performance.</li>
-                    <li>Correction of extreme rainfall events is challenging due to PDIR limitations (4 km × 4 km resolution).</li>
-                    <li>Ongoing: Refining corrections for high-intensity events.</li>
+                    <li>Used 1985–2024 data, derived SPI/SPEI indices.</li>
+                    <li>Simulated NIWR with AquaCrop for maize, paddy, and wheat.</li>
+                    <li>Correlation among irrigation demand and meteorological droughts was found.</li>
+                    <li>The result was used to calculate Factor of Safety of irrigation system.</li>
                 </ul>
             </div>
-            
+            <div class="work-card">
+                <img src="images/NIWR_SPEI3_monsoon_separate.png" alt="Seasonal NIWR Prediction" class="work-image" onclick="openModal('images/NIWR_SPEI3_monsoon_separate.png')">
+                <h3>Seasonal NIWR Prediction Using Satellite Data</h3>
+                <p>Developed a model for crop NIWR in Chitwan, Nepal (2000–2024).</p>
+                <ul>
+                    <li>Used AquaCrop and MODIS-based drought indices (LST, ESI).</li>
+                    <li>Calibrated Random Forest (R² = 0.83), validated (R² = 0.72), predicted 2020–2023 (R² = 0.74).</li>
+                    <li>Enabled early drought detection and improved water planning to ensure maximum crop yield.</li>
+                </ul>
+            </div>
         </div>
         <div id="imageModal" class="modal">
             <span class="modal-close" onclick="closeModal()">&times;</span>
