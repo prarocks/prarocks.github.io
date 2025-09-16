@@ -61,9 +61,9 @@ nav ul li a:hover {
 
 /* Sections */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 60px;
 }
 h2 {
     text-align: center;
@@ -98,24 +98,30 @@ h2 {
 }
 
 /* Skills */
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
-.skills-list li {
+.skill-badge {
     background: linear-gradient(135deg, #007bff, #00bfff);
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 25px;
     border-radius: 30px;
     font-size: 1.1em;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.skills-list li:hover {
+.skill-badge:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+.skill-badge i {
+    font-size: 1.2em;
 }
 
 /* Education & Experience */
@@ -158,6 +164,8 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 .work-card:hover {
     transform: translateY(-10px);
@@ -165,7 +173,7 @@ h2 {
 }
 .work-image {
     width: 100%;
-    max-height: 250px;
+    max-height: 280px;
     object-fit: contain;
     border-radius: 8px;
     margin: 0 auto 20px;
@@ -191,12 +199,32 @@ h2 {
 .work-card ul {
     list-style: disc;
     margin-left: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 .work-card li {
     font-size: 1em;
     margin-bottom: 10px;
     color: #666;
+}
+.work-card li strong {
+    color: #333;
+}
+.work-card li em {
+    font-style: italic;
+}
+.work-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+}
+.work-link:hover {
+    background: #0056b3;
 }
 
 /* Modal for Works Images */
@@ -327,9 +355,8 @@ footer {
     .hero p {
         font-size: 1.3em;
     }
-    .skills-list {
-        flex-direction: column;
-        align-items: center;
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
     .education-grid {
         grid-template-columns: 1fr;
@@ -358,7 +385,7 @@ footer {
 }
 @media (max-width: 480px) {
     section {
-        padding: 40px 15px;
+        padding: 60px 15px;
     }
     .hero h1 {
         font-size: 2em;
