@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -35,17 +36,17 @@
 
     <section id="skills">
         <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>SWAT / SWAT+</li>
-            <li>Google Earth Engine (GEE)</li>
-            <li>AquaCrop</li>
-            <li>Python</li>
-            <li>R</li>
-            <li>AutoCAD</li>
-            <li>Time Series Analysis</li>
-            <li>Remote Sensing & GIS</li>
-            <li>Machine Learning</li>
-        </ul>
+        <div class="skills-grid">
+            <div class="skill-badge"><i class="fas fa-water"></i> SWAT / SWAT+</div>
+            <div class="skill-badge"><i class="fab fa-google"></i> Google Earth Engine (GEE)</div>
+            <div class="skill-badge"><i class="fas fa-leaf"></i> AquaCrop</div>
+            <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-badge"><i class="fab fa-r-project"></i> R</div>
+            <div class="skill-badge"><i class="fas fa-drafting-compass"></i> AutoCAD</div>
+            <div class="skill-badge"><i class="fas fa-chart-line"></i> Time Series Analysis</div>
+            <div class="skill-badge"><i class="fas fa-satellite"></i> Remote Sensing & GIS</div>
+            <div class="skill-badge"><i class="fas fa-brain"></i> Machine Learning</div>
+        </div>
     </section>
 
     <section id="education">
@@ -79,10 +80,11 @@
                 <ul>
                     <li>Used machine learning and topographical parameters (slope, aspect, elevation).</li>
                     <li>Compared PDIR pixel values with gauge observations at the same pixel location</li>
-                    <li>Improved accuracy for light and medium precipitation; strong seasonal performance.</li>
+                    <li><strong>Improved accuracy</strong> for light and medium precipitation; strong seasonal performance.</li>
                     <li>Correction of Extreme rainfall event is challenging due to PDIR limitations (4 km × 4 km resolution).</li>
-                    <li>Ongoing: Refining corrections for high-intensity events.</li>
+                    <li><em>Ongoing:</em> Refining corrections for high-intensity events.</li>
                 </ul>
+                <a href="https://github.com/prarocks" target="_blank" class="work-link">View on GitHub</a>
             </div>
             <div class="work-card">
                 <img src="images/kankai.png" alt="Watershed Modelling" class="work-image" onclick="openModal('images/kankai.png')">
@@ -91,9 +93,10 @@
                 <ul>
                     <li>Simulated stream flow under climate scenarios (SSP2-4.5 & SSP5-8.5).</li>
                     <li>Built a spring-fed river dynamics model.</li>
-                    <li>Findings: SSP2-4.5 showed reduced runoff; SSP5-8.5 had higher peak flows, declining baseflow.</li>
+                    <li><strong>Findings:</strong> SSP2-4.5 showed reduced runoff; SSP5-8.5 had higher peak flows, declining baseflow.</li>
                     <li>Simulation shows imminent flood management and irrigation challenges.</li>
                 </ul>
+                <a href="https://github.com/prarocks" target="_blank" class="work-link">View on GitHub</a>
             </div>
             <div class="work-card">
                 <img src="images/Mahakali.png" alt="Drought Analysis" class="work-image" onclick="openModal('images/Mahakali.png')">
@@ -102,9 +105,10 @@
                 <ul>
                     <li>Used 1985–2024 data, derived SPI/SPEI indices.</li>
                     <li>Simulated NIWR with AquaCrop for maize, paddy, and wheat.</li>
-                    <li>Correlation among irrigation demand and meteorological droughts was found.</li>
+                    <li><strong>Correlation</strong> among irrigation demand and meteorological droughts was found.</li>
                     <li>The result was used to Factor of Safety of irrigation system.</li>
                 </ul>
+                <a href="https://github.com/prarocks" target="_blank" class="work-link">View on GitHub</a>
             </div>
             <div class="work-card">
                 <img src="images/NIWR_SPEI3_monsoon_separate.png" alt="Seasonal NIWR Prediction" class="work-image" onclick="openModal('images/NIWR_SPEI3_monsoon_separate.png')">
@@ -113,8 +117,9 @@
                 <ul>
                     <li>Used AquaCrop and MODIS-based drought indices (LST, ESI).</li>
                     <li>Calibrated Random Forest (R² = 0.83), validated (R² = 0.72), predicted 2020–2023 (R² = 0.74).</li>
-                    <li>Enabled early drought detection and improved water planning to ensure maximum crop yield.</li>
+                    <li><strong>Enabled</strong> early drought detection and improved water planning to ensure maximum crop yield.</li>
                 </ul>
+                <a href="https://github.com/prarocks" target="_blank" class="work-link">View on GitHub</a>
             </div>
         </div>
         <div id="imageModal" class="modal">
@@ -124,7 +129,7 @@
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
+        <h2>Get in Touch</h2>
         <form id="contact-form" action="https://formspree.io/f/xyzdaywj" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
