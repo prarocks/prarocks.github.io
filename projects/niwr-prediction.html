@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prasanna Dahal - NIWR Prediction using Random Forest in Chitwan, Nepal">
+    <title>NIWR Prediction - Prasanna Dahal</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#education">Education & Experience</a></li>
+                <li><a href="../index.html#works">Works</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>NIWR Prediction using Random Forest</h1>
+            <p>Forecasting Irrigation Water Needs in Chitwan, Nepal</p>
+        </div>
+    </header>
 
+    <section id="project-details">
+        <div class="work-card">
+            <h2>Overview</h2>
+            <p>This project uses a Random Forest model to predict seasonal Net Irrigation Water Requirement (NIWR) in Chitwan, Nepal, based on climate data (2002–2015) for winter, spring, and monsoon seasons, forecasting up to 2022. <em>This work is part of ongoing research. Contact me at <a href="mailto:prasanna1dahal@gmail.com">prasanna1dahal@gmail.com</a> for details.</em></p>
+
+            <h2>Key Findings</h2>
+            <ul>
+                <li>Developed a Random Forest model using features like ESI, LST, and precipitation to predict NIWR.</li>
+                <li>Achieved high accuracy with RMSE of 19.29, Pearson correlation of 0.91 (p=0.011), and Spearman correlation of 0.94 (p=0.0048), indicating strong model performance.</li>
+                <li>Projected NIWR trends for 2015–2022, showing seasonal variations in water demand.</li>
+                <li>Identified key climate factors influencing irrigation needs, supporting water management planning.</li>
+            </ul>
+
+            <h2>Visual</h2>
+            <img src="../images/NIWR_Projections_2015_onwards_with_PI.png" alt="NIWR projections with prediction intervals" class="work-image" onclick="openModal('../images/NIWR_Projections_2015_onwards_with_PI.png')">
+            <p class="caption">Figure: Projected seasonal NIWR (2015–2022) with 90% prediction intervals for Chitwan, Nepal. <em>Image from ongoing research. Contact for usage permissions.</em></p>
+
+            <a href="../index.html#works" class="read-more">Back to Home</a>
+        </div>
+        <div id="imageModal" class="modal">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-content" src="">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Prasanna Dahal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Modal for image enhancement
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
