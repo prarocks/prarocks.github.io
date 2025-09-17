@@ -314,11 +314,11 @@ h2::after {
     overflow: auto;
 }
 .modal-content {
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 100vw;
+    max-height: 100vh;
     object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    box-shadow: none;
 }
 .modal-close {
     position: absolute;
