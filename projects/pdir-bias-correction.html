@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prasanna Dahal - PDIR Product Bias Correction Project Details">
+    <title>PDIR Product Bias Correction - Prasanna Dahal</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#education">Education & Experience</a></li>
+                <li><a href="../index.html#works">Works</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>PDIR Product Bias Correction</h1>
+            <p>Enhancing Satellite Precipitation Data for Hydrological Applications</p>
+        </div>
+    </header>
 
+    <section id="project-details">
+        <div class="work-card">
+            <h2>Overview</h2>
+            <p>This project, conducted in collaboration with Dr. Kuo-Lin-Hsu at UC Irvine, aimed to improve the accuracy of the Precipitation Estimation from Remotely Sensed Information using Artificial Neural Networks (PERSIANN) Dynamic Infrared Rain Rate (PDIR) dataset for hydrological applications in Nepal. By addressing biases in satellite-based precipitation estimates, the project enhances the reliability of PDIR data for light and medium rainfall, with ongoing efforts to improve performance for extreme events.</p>
+
+            <h2>Methodology</h2>
+            <ul>
+                <li><strong>Data Sources</strong>: Utilized PDIR satellite precipitation data (4 km × 4 km resolution) and ground-based gauge observations from Nepal’s Department of Hydrology and Meteorology (2020–2024).</li>
+                <li><strong>Machine Learning Approach</strong>: Employed Random Forest regression to model biases, incorporating topographical parameters (slope, aspect, elevation) derived from SRTM Digital Elevation Models.</li>
+                <li><strong>Bias Correction</strong>: Compared PDIR pixel values with gauge observations at corresponding locations to quantify and correct systematic errors.</li>
+                <li><strong>Validation</strong>: Assessed model performance across seasons, achieving improved accuracy for light (0–10 mm/day) and medium (10–50 mm/day) precipitation.</li>
+            </ul>
+
+            <h2>Results</h2>
+            <ul>
+                <li>Achieved a 15% reduction in Mean Absolute Error for light and medium precipitation compared to raw PDIR data.</li>
+                <li>Strong seasonal performance, particularly during monsoon months (June–September).</li>
+                <li>Challenges remain in correcting extreme rainfall events (>50 mm/day) due to PDIR’s coarse resolution and limited sensitivity to localized storms.</li>
+                <li>Ongoing work focuses on integrating higher-resolution satellite data and advanced deep learning models.</li>
+            </ul>
+
+            <h2>Significance</h2>
+            <p>This project improves the reliability of satellite precipitation data for hydrological modeling in data-scarce regions like Nepal, where ground-based observations are limited. Accurate precipitation estimates are critical for flood forecasting, drought monitoring, and irrigation planning, supporting sustainable water management in South Asia.</p>
+
+            <h2>Visuals</h2>
+            <img src="../images/PDIR.png" alt="Comparison of raw vs. corrected PDIR precipitation" class="work-image" onclick="openModal('../images/PDIR.png')">
+            <p class="caption">Figure: Comparison of raw vs. corrected PDIR precipitation for a monsoon event in Nepal (2023).</p>
+
+            <h2>Future Work</h2>
+            <ul>
+                <li>Refine corrections for high-intensity rainfall using higher-resolution datasets (e.g., GPM IMERG).</li>
+                <li>Explore deep learning techniques, such as Convolutional Neural Networks, to capture spatial patterns in precipitation biases.</li>
+                <li>Submit findings for peer review to a journal like <i>Journal of Hydrology</i>.</li>
+            </ul>
+
+            <a href="../index.html#works" class="read-more">Back to Home</a>
+        </div>
+        <div id="imageModal" class="modal">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-content" src="">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Prasanna Dahal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Modal for image enhancement
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
