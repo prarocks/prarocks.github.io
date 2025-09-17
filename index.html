@@ -23,7 +23,7 @@
             </ul>
         </nav>
         <div class="hero">
-            <img src="images/mypicture.jpg" alt="Prasanna Dahal" class="hero-photo">
+            <img src="images/mypicture.jpg" alt="Prasanna Dahal" class="profile-photo">
             <h1>Prasanna Dahal</h1>
             <p class="hero-subtitle">Civil Engineer | Water Resources & Remote Sensing</p>
         </div>
@@ -79,7 +79,7 @@
             <h2>Research Projects</h2>
             <div class="works-grid">
                 <div class="work-card">
-                    <img src="images/PDIR1.png" alt="PDIR Product Bias Correction" class="work-image" onclick="openModal('images/PDIR.png')">
+                    <img src="images/PDIR1.png" alt="PDIR Product Bias Correction" class="work-image">
                     <h3>PDIR Product Bias Correction</h3>
                     <p>Collaborated with Dr. Kuo-Lin-Hsu (UC Irvine) to enhance PDIR satellite precipitation data.</p>
                     <ul>
@@ -90,9 +90,10 @@
                         <li>Ongoing: Refining corrections for high-intensity events.</li>
                     </ul>
                     <a href="projects/pdir-bias-correction.html" class="read-more">Read More</a>
+                    <p class="caption">Click image to enlarge</p>
                 </div>
                 <div class="work-card">
-                    <img src="images/kankai.png" alt="Watershed Modelling" class="work-image" onclick="openModal('images/kankai.png')">
+                    <img src="images/kankai.png" alt="Watershed Modelling" class="work-image">
                     <h3>Watershed Modelling for Irrigation Sustainability</h3>
                     <p>Assessed irrigation sustainability in Kankai and Rapti River basins using SWAT.</p>
                     <ul>
@@ -102,9 +103,10 @@
                         <li>Simulation shows imminent flood management and irrigation challenges.</li>
                     </ul>
                     <a href="projects/watershed-modelling.html" class="read-more">Read More</a>
+                    <p class="caption">Click image to enlarge</p>
                 </div>
                 <div class="work-card">
-                    <img src="images/Mahakali.png" alt="Drought Analysis" class="work-image" onclick="openModal('images/Mahakali.png')">
+                    <img src="images/Mahakali.png" alt="Drought Analysis" class="work-image">
                     <h3>Drought Analysis and Agricultural Water Needs</h3>
                     <p>Studied meteorological drought impacts on Net Irrigation Water Requirement (NIWR).</p>
                     <ul>
@@ -114,9 +116,10 @@
                         <li>The result was used to Factor of Safety of irrigation system.</li>
                     </ul>
                     <a href="projects/drought-analysis.html" class="read-more">Read More</a>
+                    <p class="caption">Click image to enlarge</p>
                 </div>
                 <div class="work-card">
-                    <img src="images/NIWR_SPEI3_monsoon_separate.png" alt="Seasonal NIWR Prediction" class="work-image" onclick="openModal('images/NIWR_SPEI3_monsoon_separate.png')">
+                    <img src="images/NIWR_SPEI3_monsoon_separate.png" alt="Seasonal NIWR Prediction" class="work-image">
                     <h3>Seasonal NIWR Prediction Using Satellite Data</h3>
                     <p>Developed a model for crop NIWR in Chitwan, Nepal (2000–2024).</p>
                     <ul>
@@ -125,6 +128,7 @@
                         <li>Enabled early drought detection and improved water planning to ensure maximum crop yield.</li>
                     </ul>
                     <a href="projects/niwr-prediction.html" class="read-more">Read More</a>
+                    <p class="caption">Click image to enlarge</p>
                 </div>
             </div>
             <div id="imageModal" class="modal">
@@ -218,6 +222,13 @@
                 closeModal();
             }
         };
+
+        // Add click event to work images
+        document.querySelectorAll('.work-image').forEach(img => {
+            img.addEventListener('click', () => {
+                openModal(img.src);
+            });
+        });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
