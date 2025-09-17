@@ -202,18 +202,20 @@
             const modalImg = document.getElementById('modalImage');
             modal.style.display = 'flex';
             modalImg.src = src;
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             const modal = document.getElementById('imageModal');
             modal.style.display = 'none';
+            document.body.style.overflow = '';
         }
 
         // Close modal when clicking outside image
         window.onclick = function(event) {
             const modal = document.getElementById('imageModal');
             if (event.target === modal) {
-                modal.style.display = 'none';
+                closeModal();
             }
         };
 
