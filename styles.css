@@ -73,7 +73,8 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url('images/water-bg.jpg') center/cover no-repeat; /* Optional: Add a subtle water-themed background */
+    /* Optional: Add a water-themed background image if available */
+    /* background: url('images/water-bg.jpg') center/cover no-repeat; */
 }
 .hero h1 {
     font-size: 4em;
@@ -110,9 +111,9 @@ nav ul li a:hover {
 
 /* Sections */
 section {
-    padding: 80px 20px;
+    padding: 100px 20px; /* Increased padding for more spacing */
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 60px; /* Added bottom margin for section separation */
     background: linear-gradient(to bottom, #fff, #f5faff);
     border-radius: 12px;
 }
@@ -318,7 +319,6 @@ h2::after {
     align-items: center;
     justify-content: center;
     overflow: auto;
-    transition: opacity 0.3s ease;
 }
 .modal-content {
     max-width: 90vw;
@@ -326,11 +326,6 @@ h2::after {
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
-    animation: zoomIn 0.3s ease;
-}
-@keyframes zoomIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
 }
 .modal-close {
     position: absolute;
@@ -340,11 +335,10 @@ h2::after {
     font-size: 50px;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 .modal-close:hover {
     color: #bbb;
-    transform: scale(1.2);
 }
 
 /* Contact */
@@ -410,7 +404,7 @@ button:disabled {
 }
 .contact-links p {
     margin-bottom: 12px;
-    fontosen-size: 1.1em;
+    font-size: 1.1em;
     color: var(--text-light);
 }
 .contact-links a {
@@ -495,6 +489,7 @@ footer {
 @media (max-width: 480px) {
     section {
         padding: 60px 15px;
+        margin-bottom: 40px;
     }
     .hero {
         min-height: 50vh;
