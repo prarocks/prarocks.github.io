@@ -311,11 +311,11 @@ h2::after {
     background-color: rgba(0,0,0,0.85);
     align-items: center;
     justify-content: center;
-    overflow: auto;
+    overflow: hidden;
 }
 .modal-content {
-    max-width: 100vw;
-    max-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     object-fit: contain;
     border-radius: 0;
     box-shadow: none;
