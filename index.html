@@ -55,28 +55,22 @@
 
         <section id="education" class="fade-in">
             <h2>Education & Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Bachelor of Civil Engineering</h3>
-                        <p>IOE, Pulchowk Campus</p>
-                        <p>April 2021 – April 2025 (Student)</p>
-                        <p>Merit Based Scholarship</p>
-                    </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Bachelor of Civil Engineering</h3>
+                    <p>IOE, Pulchowk Campus</p>
+                    <p>April 2021 – April 2025 (Student)</p>
+                    <p>Merit Based Scholarship</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Research Assistant</h3>
-                        <p>Dr. Suraj Lamichhane, IOE</p>
-                        <p>October 2024 – April 2025</p>
-                    </div>
+                <div class="education-card">
+                    <h3>Research Assistant</h3>
+                    <p>Dr. Suraj Lamichhane, IOE</p>
+                    <p>October 2024 – April 2025</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Research Intern</h3>
-                        <p>Center for Water Resource Studies, IOE</p>
-                        <p>April 2025 – Present</p>
-                    </div>
+                <div class="education-card">
+                    <h3>Research Intern</h3>
+                    <p>Center for Water Resource Studies, IOE</p>
+                    <p>April 2025 – Present</p>
                 </div>
             </div>
         </section>
@@ -109,7 +103,7 @@
                     </ul>
                     <a href="projects/watershed-modelling.html" class="read-more">Read More</a>
                 </div>
-                <div class="work-card">
+                <div män class="work-card">
                     <img src="images/Mahakali.png" alt="Drought Analysis" class="work-image" onclick="openModal('images/Mahakali.png')">
                     <h3>Drought Analysis and Agricultural Water Needs</h3>
                     <p>Studied meteorological drought impacts on Net Irrigation Water Requirement (NIWR).</p>
@@ -258,6 +252,16 @@
         }, { threshold: 0.1 });
 
         fadeElements.forEach(el => observer.observe(el));
+
+        // Toggle nav bar class on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 </html>
