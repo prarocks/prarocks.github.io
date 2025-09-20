@@ -47,28 +47,28 @@ nav ul li a:hover {
 }
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 50px 20px; /* Reduced padding */
 }
 .hero h1 {
-    font-size: 3.5em;
+    font-size: 3em; /* Slightly reduced */
     font-family: 'Poppins', sans-serif;
     margin-bottom: 10px;
 }
 .hero p {
-    font-size: 1.6em;
+    font-size: 1.4em; /* Slightly reduced */
     font-weight: 300;
 }
 
 /* Sections */
 section {
-    padding: 80px 20px;
+    padding: 50px 20px; /* Reduced padding */
     max-width: 1200px;
-    margin: 0 auto 80px;
+    margin: 0 auto 50px; /* Reduced margin */
 }
 h2 {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5em;
+    margin-bottom: 30px; /* Reduced */
+    font-size: 2.2em; /* Slightly reduced */
     font-family: 'Poppins', sans-serif;
     color: #007bff;
 }
@@ -76,9 +76,9 @@ h2 {
 /* About */
 .profile-photo {
     display: block;
-    margin: 0 auto 30px;
-    width: 220px;
-    height: 220px;
+    margin: 0 auto 20px; /* Reduced margin */
+    width: 180px; /* Reduced size */
+    height: 180px;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #fff;
@@ -89,8 +89,8 @@ h2 {
     transform: scale(1.05);
 }
 #about p {
-    font-size: 1.3em;
-    line-height: 1.9;
+    font-size: 1.2em; /* Slightly reduced */
+    line-height: 1.8; /* Slightly tightened */
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
@@ -101,7 +101,7 @@ h2 {
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px; /* Reduced gap */
     justify-content: center;
     max-width: 800px;
     margin: 0 auto;
@@ -109,9 +109,9 @@ h2 {
 .skill-badge {
     background: linear-gradient(135deg, #007bff, #00bfff);
     color: #fff;
-    padding: 12px 20px;
+    padding: 10px 18px; /* Slightly reduced */
     border-radius: 30px;
-    font-size: 1em;
+    font-size: 0.95em; /* Slightly reduced */
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -130,11 +130,11 @@ h2 {
 .education-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 20px; /* Reduced gap */
 }
 .education-card {
     background: #fff;
-    padding: 25px;
+    padding: 20px; /* Reduced */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -144,12 +144,12 @@ h2 {
     transform: translateY(-10px);
 }
 .education-card h3 {
-    margin-bottom: 12px;
+    margin-bottom: 10px; /* Reduced */
     font-family: 'Poppins', sans-serif;
     color: #333;
 }
 .education-card p {
-    margin-bottom: 8px;
+    margin-bottom: 6px; /* Reduced */
     color: #666;
 }
 
@@ -157,7 +157,7 @@ h2 {
 .works-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 40px;
+    gap: 30px; /* Reduced gap */
 }
 @media (min-width: 768px) {
     .works-grid {
@@ -166,14 +166,14 @@ h2 {
 }
 .work-card {
     background: #fff;
-    padding: 30px;
+    padding: 25px; /* Reduced */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    min-height: 650px;
+    min-height: auto; /* Removed fixed min-height */
 }
 .work-card:hover {
     transform: translateY(-10px);
@@ -181,10 +181,10 @@ h2 {
 }
 .work-image {
     width: 100%;
-    height: auto;
+    max-height: 250px; /* Added max-height to limit image size */
     object-fit: contain;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced */
     display: block;
     border: 1px solid #eee;
     cursor: pointer;
@@ -195,29 +195,29 @@ h2 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .work-card h3 {
-    font-size: 1.6em;
-    margin-bottom: 15px;
+    font-size: 1.5em; /* Slightly reduced */
+    margin-bottom: 12px; /* Reduced */
     font-family: 'Poppins', sans-serif;
 }
 .work-card p {
-    font-size: 1.05em;
-    margin-bottom: 15px;
+    font-size: 1em; /* Slightly reduced */
+    margin-bottom: 12px; /* Reduced */
     color: #555;
 }
 .work-card ul {
     list-style: disc;
     margin-left: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 12px; /* Reduced */
     flex-grow: 1;
 }
 .work-card li {
-    font-size: 1em;
-    margin-bottom: 10px;
+    font-size: 0.95em; /* Slightly reduced */
+    margin-bottom: 8px; /* Reduced */
     color: #666;
 }
 .read-more {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 18px; /* Slightly reduced */
     background: linear-gradient(135deg, #007bff, #00bfff);
     color: #fff;
     border-radius: 6px;
@@ -275,22 +275,22 @@ h2 {
 form {
     max-width: 650px;
     margin: 0 auto;
-    padding: 25px;
+    padding: 20px; /* Reduced */
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 label {
     display: block;
-    margin: 15px 0 5px;
+    margin: 12px 0 5px; /* Reduced */
     font-size: 1.1em;
     font-weight: 600;
     color: #333;
 }
 input, textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
+    padding: 10px; /* Reduced */
+    margin-bottom: 12px; /* Reduced */
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 1em;
@@ -301,13 +301,13 @@ input:focus, textarea:focus {
     outline: none;
 }
 textarea {
-    min-height: 140px;
+    min-height: 120px; /* Reduced */
     resize: vertical;
 }
 button {
     display: block;
     width: 100%;
-    padding: 14px;
+    padding: 12px; /* Reduced */
     background: linear-gradient(135deg, #007bff, #00bfff);
     color: #fff;
     border: none;
@@ -328,10 +328,10 @@ button:disabled {
 }
 .contact-links {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px; /* Reduced */
 }
 .contact-links p {
-    margin-bottom: 12px;
+    margin-bottom: 10px; /* Reduced */
     font-size: 1.1em;
     color: #555;
 }
@@ -346,7 +346,7 @@ button:disabled {
 /* Footer */
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 20px; /* Reduced */
     background: #333;
     color: #fff;
     font-size: 0.95em;
@@ -393,8 +393,8 @@ footer {
 }
 @media (max-width: 480px) {
     section {
-        padding: 60px 15px;
-        margin-bottom: 60px;
+        padding: 40px 15px; /* Further reduced */
+        margin-bottom: 40px; /* Further reduced */
     }
     .hero h1 {
         font-size: 2em;
@@ -403,16 +403,16 @@ footer {
         font-size: 1.1em;
     }
     .profile-photo {
-        width: 180px;
-        height: 180px;
+        width: 150px; /* Further reduced */
+        height: 150px;
     }
     #about p {
-        font-size: 1.2em;
+        font-size: 1.1em; /* Further reduced */
     }
     label {
         font-size: 1em;
     }
-    .work-card {
-        min-height: auto;
+    .work-image {
+        max-height: 200px; /* Further limited for small screens */
     }
 }
