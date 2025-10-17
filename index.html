@@ -148,10 +148,6 @@
                     <a href="projects/niwr-prediction.html" class="read-more">Read More</a>
                 </div>
             </div>
-            <div id="imageModal" class="modal">
-                <span class="modal-close" onclick="closeModal()">&times;</span>
-                <img id="modalImage" class="modal-content" src="">
-            </div>
         </section>
 
         <section id="contact" class="fade-in">
@@ -215,36 +211,6 @@
                     button.disabled = false;
                 }, 2000);
             }
-        });
-
-        // Modal for image enhancement
-        function openModal(src) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modal.style.display = 'flex';
-            modalImg.src = src;
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-
-        // Close modal when clicking outside image
-        window.onclick = function(event) {
-            const modal = document.getElementById('imageModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        };
-
-        // Add click event to work images
-        document.querySelectorAll('.work-image').forEach(img => {
-            img.addEventListener('click', () => {
-                openModal(img.src);
-            });
         });
 
         // Smooth scrolling for navigation links
