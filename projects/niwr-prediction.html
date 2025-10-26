@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-       <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XKFFPFVCT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-9XKFFPFVCT');
-</script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XKFFPFVCT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9XKFFPFVCT');
+    </script>
+    <!-- End Google Analytics -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Prasanna Dahal - NIWR Prediction using Random Forest in Chitwan, Nepal">
@@ -20,9 +21,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <div class="logo">Prasanna Dahal</div>
+            <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#skills">Skills</a></li>
@@ -30,17 +32,25 @@
                 <li><a href="../index.html#works">Works</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
             </ul>
-        </nav>
-        <div class="hero">
-            <h1>NIWR Prediction using Random Forest</h1>
-            <p>Forecasting Irrigation Water Needs in Chitwan, Nepal</p>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         </div>
-    </header>
+    </nav>
 
-    <section id="project-details">
-        <div class="work-card">
+    <main>
+        <section class="fade-in project-section">
+            <h1>NIWR Prediction using Random Forest</h1>
+            <h2>Forecasting Irrigation Water Needs in Chitwan, Nepal</h2>
+
             <h2>Overview</h2>
-            <p>This project uses a Random Forest model to predict seasonal Net Irrigation Water Requirement (NIWR) in Chitwan, Nepal, based on climate data (2002–2015) for winter, spring, and monsoon seasons, forecasting up to 2023. <em> Code will be published in Github after the paper is accepted for publication. This work is part of ongoing research. Contact me at <a href="mailto:prasanna1dahal@gmail.com">prasanna1dahal@gmail.com</a> for details.</em></p>
+            <p>This project uses a Random Forest model to predict seasonal Net Irrigation Water Requirement (NIWR) in Chitwan, Nepal, based on climate data (2002–2015) for winter, spring, and monsoon seasons, forecasting up to 2023. <em>Code will be published on GitHub after the paper is accepted for publication. This work is part of ongoing research. Contact me at <a href="mailto:prasanna1dahal@gmail.com">prasanna1dahal@gmail.com</a> for details.</em></p>
+
+            <h2>Methodology</h2>
+            <ul>
+                <li><strong>Data Collection</strong>: Utilized climate data (precipitation, temperature) and remote sensing indices (ESI, LST) from 2002–2015.</li>
+                <li><strong>Model Development</strong>: Trained a Random Forest regressor with features including Evaporative Stress Index (ESI), Land Surface Temperature (LST), and precipitation, validated with observed NIWR data.</li>
+                <li><strong>Evaluation Metrics</strong>: Assessed model performance using RMSE (19.29), Pearson correlation (0.91, p=0.011), and Spearman correlation (0.94, p=0.0048).</li>
+                <li><strong>Forecasting</strong>: Projected NIWR trends for 2021–2023 with 90% prediction intervals.</li>
+            </ul>
 
             <h2>Key Findings</h2>
             <ul>
@@ -50,21 +60,31 @@
                 <li>Identified key climate factors influencing irrigation needs, supporting water management planning.</li>
             </ul>
 
-            <h2>Visual</h2>
-            <img src="../img/prediction.png" alt="NIWR projections with prediction intervals" class="work-image" onclick="openModal('../img/prediction.png')">
+            <h2>Visuals</h2>
+            <img src="../images/prediction.png" alt="NIWR projections with prediction intervals" class="work-image" onclick="openModal('../images/prediction.png')">
             <p class="caption">Figure: Projected seasonal NIWR (2021–2023) with 90% prediction intervals for Chitwan, Nepal. <em>Image from ongoing research. Contact for usage permissions.</em></p>
 
-            <a href="../index.html#works" class="read-more">Back to Home</a>
-        </div>
-        <div id="imageModal" class="modal">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" class="modal-content" src="">
-        </div>
-    </section>
+            <h2>Future Work</h2>
+            <ul>
+                <li>Extend the model with additional climate variables (e.g., humidity, wind speed) for improved accuracy.</li>
+                <li>Validate predictions with field data from 2023 onwards.</li>
+                <li>Publish code and dataset on GitHub post-publication, along with a detailed methodology paper.</li>
+            </ul>
+
+            <a href="../index.html#works" class="read-more back-home">Back to Home</a>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 Prasanna Dahal. All rights reserved.</p>
     </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content" src="">
+    </div>
+
+    <button id="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
     <script>
         // Modal for image enhancement
@@ -73,20 +93,80 @@
             const modalImg = document.getElementById('modalImage');
             modal.style.display = 'flex';
             modalImg.src = src;
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             const modal = document.getElementById('imageModal');
             modal.style.display = 'none';
+            document.body.style.overflow = '';
         }
 
         // Close modal when clicking outside image
         window.onclick = function(event) {
             const modal = document.getElementById('imageModal');
             if (event.target === modal) {
-                modal.style.display = 'none';
+                closeModal();
             }
         };
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else {
+                    window.location.href = this.href;
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Fade-in animations on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Sticky nav and toggle class on scroll
+        const nav = document.querySelector('.sticky-nav');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Hamburger menu for mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
