@@ -59,6 +59,7 @@ ul {
 .nav-links {
     display: flex;
     gap: 25px;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -68,6 +69,7 @@ ul {
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     transition: background 0.3s ease;
+    white-space: nowrap; /* Prevents text wrapping */
 }
 .nav-links li a:hover {
     background: rgba(255, 255, 255, 0.2);
@@ -470,85 +472,3 @@ footer {
     width: 35px;
     height: 35px;
     display: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-#back-to-top:hover {
-    opacity: 0.85;
-}
-
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(15px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: inherit;
-        padding: 15px;
-        align-items: center;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .menu-toggle {
-        display: block;
-    }
-    .timeline::before {
-        left: 15px;
-    }
-    .timeline-item {
-        width: 100%;
-        padding-left: 30px;
-        left: 0 !important;
-    }
-    .timeline-item::before {
-        left: 10px !important;
-    }
-    .works-grid {
-        grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 480px) {
-    section {
-        padding: 25px 15px;
-    }
-    .hero h1 {
-        font-size: 2em;
-    }
-    .hero-subtitle {
-        font-size: 1em;
-    }
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-    #about p {
-        font-size: 0.95em;
-    }
-    .work-image {
-        max-height: 180px;
-    }
-    .project-section h1 {
-        font-size: 1.8em;
-    }
-    .project-section h2 {
-        font-size: 1.4em;
-    }
-}
