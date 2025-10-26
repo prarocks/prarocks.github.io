@@ -12,9 +12,9 @@
     <!-- End Google Analytics -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PDIR Product Bias Correction - Enhancing Satellite Precipitation Data for Hydrological Applications">
-    <title>PDIR Product Bias Correction</title>
-    <link rel="stylesheet" href="../styles.css">
+    <meta name="description" content="Prasanna Dahal's Portfolio - Civil Engineer specializing in Water Resources and Remote Sensing">
+    <title>Prasanna Dahal - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
@@ -25,59 +25,146 @@
         <div class="nav-container">
             <div class="logo">Prasanna Dahal</div>
             <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
-                <li><a href="../index.html#education">Education & Experience</a></li>
-                <li><a href="../index.html#works">Works</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education & Experience</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
+    <header class="hero-header">
+        <div class="hero">
+            <img src="images/mypicture.jpg" alt="Prasanna Dahal" class="profile-photo">
+            <h1>Prasanna Dahal</h1>
+            <p class="hero-subtitle">Civil Engineer | Water Resources & Remote Sensing</p>
+            <div class="social-links">
+                <a href="https://github.com/prarocks" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/prasanna-dahal-2b2744238/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:prasanna1dahal@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
 
     <main>
-        <section class="fade-in project-section">
-            <h1>PDIR Product Bias Correction</h1>
-            <h2>Enhancing Satellite Precipitation Data for Hydrological Applications</h2>
+        <section id="about" class="fade-in">
+            <h2>About Me</h2>
+            <p>I am a civil engineer specializing in water resources, with expertise in watershed modeling, drought assessment, and remote sensing for agricultural and hydrological applications. Passionate about addressing climate-driven water challenges in South Asia, I aim to advance sustainable water management through data-driven hydrological modeling and machine learning in graduate studies. My work integrates tools like SWAT+, Google Earth Engine, and AquaCrop to tackle pressing issues like irrigation sustainability and drought prediction.</p>
+        </section>
 
-            <h2>Overview</h2>
-            <p>This project, conducted in collaboration with Dr. Kuo-Lin-Hsu at UC Irvine, aimed to improve the accuracy of the Precipitation Estimation from Remotely Sensed Information using Artificial Neural Networks (PERSIANN) Dynamic Infrared Rain Rate (PDIR) dataset for hydrological applications in Nepal. By addressing biases in satellite-based precipitation estimates, the project enhances the reliability of PDIR data for light and medium rainfall, with ongoing efforts to improve performance for extreme events.</p>
+        <section id="skills" class="fade-in">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-badge"><i class="fas fa-water"></i> SWAT / SWAT+</div>
+                <div class="skill-badge"><i class="fab fa-google"></i> Google Earth Engine (GEE)</div>
+                <div class="skill-badge"><i class="fas fa-leaf"></i> AquaCrop</div>
+                <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
+                <div class="skill-badge"><i class="fab fa-r-project"></i> R</div>
+                <div class="skill-badge"><i class="fas fa-drafting-compass"></i> AutoCAD</div>
+                <div class="skill-badge"><i class="fas fa-chart-line"></i> Time Series Analysis</div>
+                <div class="skill-badge"><i class="fas fa-satellite"></i> Remote Sensing & GIS</div>
+                <div class="skill-badge"><i class="fas fa-brain"></i> Machine Learning</div>
+            </div>
+        </section>
 
-            <h2>Methodology</h2>
-            <ul>
-                <li><strong>Data Sources</strong>: Utilized PDIR satellite precipitation data (4 km × 4 km resolution) and ground-based gauge observations from Nepal’s Department of Hydrology and Meteorology (2020–2024).</li>
-                <li><strong>Machine Learning Approach</strong>: Employed Random Forest regression to model biases, incorporating topographical parameters (slope, aspect, elevation) derived from SRTM Digital Elevation Models.</li>
-                <li><strong>Bias Correction</strong>: Compared PDIR pixel values with gauge observations at corresponding locations to quantify and correct systematic errors.</li>
-                <li><strong>Validation</strong>: Assessed model performance across seasons, achieving improved accuracy for light (0–10 mm/day) and medium (10–50 mm/day) precipitation.</li>
-            </ul>
+        <section id="education" class="fade-in">
+            <h2>Education & Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Bachelor of Civil Engineering</h3>
+                        <p>IOE, Pulchowk Campus</p>
+                        <p>April 2021 – April 2025 (Student)</p>
+                        <p>Merit Based Scholarship</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Research Assistant</h3>
+                        <p>Dr. Suraj Lamichhane, IOE</p>
+                        <p>October 2024 – April 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Research Intern</h3>
+                        <p>Center for Water Resource Studies, IOE</p>
+                        <p>April 2025 – Present</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <h2>Results</h2>
-            <ul>
-                <li>Achieved a good reduction in Mean Absolute Error for all precipitation events compared to raw PDIR data.</li>
-                <li>Strong seasonal performance, particularly during monsoon months (June–September).</li>
-                <li>Challenges remain in correcting extreme rainfall events (&gt;50 mm/day) due to PDIR’s coarse resolution and limited sensitivity to localized storms.</li>
-                <li>Ongoing work focuses on integrating higher-resolution satellite data and advanced deep learning models.</li>
-            </ul>
+        <section id="works" class="fade-in">
+            <h2>Research Projects</h2>
+            <div class="works-grid">
+                <div class="work-card">
+                    <img src="images/PDIR1.png" alt="PDIR Product Bias Correction" class="work-image">
+                    <h3>PDIR Product Bias Correction</h3>
+                    <p>Collaborated with Dr. Kuo-Lin-Hsu (UC Irvine) to enhance PDIR satellite precipitation data.</p>
+                    <ul>
+                        <li>Used machine learning and topographical parameters (slope, aspect, elevation).</li>
+                        <li>Compared PDIR pixel values with gauge observations at the same pixel location.</li>
+                        <li>Improved accuracy for light and medium precipitation; strong seasonal performance.</li>
+                        <li>Correction of extreme rainfall events is challenging due to PDIR limitations (4 km × 4 km resolution).</li>
+                        <li>Ongoing: Refining corrections for high-intensity events.</li>
+                    </ul>
+                    <a href="projects/pdir-bias-correction.html" class="read-more">Read More</a>
+                </div>
+                <div class="work-card">
+                    <img src="images/kankai.png" alt="Watershed Modelling" class="work-image">
+                    <h3>Watershed Modelling for Irrigation Sustainability</h3>
+                    <p>Assessed irrigation sustainability in Kankai and Rapti River basins using SWAT.</p>
+                    <ul>
+                        <li>Simulated stream flow under climate scenarios (SSP2-4.5 & SSP5-8.5).</li>
+                        <li>Built a spring-fed river dynamics model.</li>
+                        <li>Findings: SSP2-4.5 showed reduced runoff; SSP5-8.5 had higher peak flows, declining baseflow.</li>
+                        <li>Simulation shows imminent flood management and irrigation challenges.</li>
+                    </ul>
+                    <a href="projects/watershed-modelling.html" class="read-more">Read More</a>
+                </div>
+                <div class="work-card">
+                    <img src="images/Mahakali.png" alt="Drought Analysis" class="work-image">
+                    <h3>Drought Analysis and Agricultural Water Needs</h3>
+                    <p>Studied meteorological drought impacts on Net Irrigation Water Requirement (NIWR).</p>
+                    <ul>
+                        <li>Used 1985–2024 data, derived SPI/SPEI indices.</li>
+                        <li>Simulated NIWR with AquaCrop for maize, paddy, and wheat.</li>
+                        <li>Correlation among irrigation demand and meteorological droughts was found.</li>
+                        <li>The result was used to Factor of Safety of irrigation system.</li>
+                    </ul>
+                    <a href="projects/drought-analysis.html" class="read-more">Read More</a>
+                </div>
+                <div class="work-card">
+                    <img src="images/NIWR_SPEI3_monsoon_separate.png" alt="Seasonal NIWR Prediction" class="work-image">
+                    <h3>Seasonal NIWR Prediction Using Satellite Data</h3>
+                    <p>Developed a model for crop NIWR in Chitwan, Nepal (2000–2024).</p>
+                    <ul>
+                        <li>Used AquaCrop and MODIS-based drought indices (LST, ESI).</li>
+                        <li>Calibrated Random Forest (R² = 0.83), validated (R² = 0.72), predicted 2020–2023 (R² = 0.74).</li>
+                        <li>Enabled early drought detection and improved water planning to ensure maximum crop yield.</li>
+                    </ul>
+                    <a href="projects/niwr-prediction.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </section>
 
-            <h2>Significance</h2>
-            <p>This project improves the reliability of satellite precipitation data for hydrological modeling in data-scarce regions like Nepal, where ground-based observations are limited. Accurate precipitation estimates are critical for flood forecasting, drought monitoring, and irrigation planning, supporting sustainable water management in South Asia.</p>
-
-            <h2>Visuals</h2>
-            <p><strong>Comparison of raw vs. corrected PDIR precipitation on Seasonal Scale</strong></p>
-            <img src="../images/PDIR_seasonal_comparison.png" alt="Comparison of raw vs. corrected PDIR precipitation on a Seasonal scale for a monsoon event in Nepal" class="work-image">
-
-            <p><strong>Comparison of raw vs. corrected PDIR precipitation on different intensity</strong></p>
-            <img src="../images/PDIR_intensity_comparison.png" alt="Comparison of raw vs. corrected PDIR precipitation for different intensities" class="work-image">
-
-            <h2>Future Work</h2>
-            <ul>
-                <li>Refine corrections for high-intensity rainfall using higher-resolution datasets (e.g., GPM IMERG).</li>
-                <li>Explore deep learning techniques, such as Convolutional Neural Networks, to capture spatial patterns in precipitation biases.</li>
-                <li>Submit findings for peer review to a journal like <em>Journal of Hydrology</em>.</li>
-            </ul>
-
-            <a href="../index.html#works" class="read-more back-home">Back to Home</a>
+        <section id="contact" class="fade-in">
+            <h2>Get in Touch</h2>
+            <form id="contact-form" action="https://formspree.io/f/xyzdaywj" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" id="submit-button">Send</button>
+            </form>
+            <div class="contact-links">
+                <p>Email: <a href="mailto:prasanna1dahal@gmail.com">prasanna1dahal@gmail.com</a></p>
+                <p><a href="https://github.com/prarocks" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/prasanna-dahal-2b2744238/" target="_blank">LinkedIn</a></p>
+            </div>
         </section>
     </main>
 
@@ -85,57 +172,54 @@
         <p>&copy; 2025 Prasanna Dahal. All rights reserved.</p>
     </footer>
 
-    <div id="imageModal" class="modal">
-        <span class="modal-close" onclick="closeModal()">&times;</span>
-        <img id="modalImage" class="modal-content" src="">
-    </div>
-
     <button id="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
     <script>
-        // Modal for image enhancement
-        function openModal(src) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modal.style.display = 'flex';
-            modalImg.src = src;
-            document.body.style.overflow = 'hidden';
-        }
+        // Formspree AJAX submission
+        document.getElementById('contact-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const form = this;
+            const button = document.getElementById('submit-button');
+            button.disabled = true;
+            button.textContent = 'Sending...';
 
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
-        }
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
 
-        // Close modal when clicking outside image
-        window.onclick = function(event) {
-            const modal = document.getElementById('imageModal');
-            if (event.target === modal) {
-                closeModal();
+                if (response.ok) {
+                    button.textContent = 'Sent';
+                    form.reset();
+                    setTimeout(() => {
+                        button.textContent = 'Send';
+                        button.disabled = false;
+                    }, 20000);
+                } else {
+                    button.textContent = 'Error';
+                    setTimeout(() => {
+                        button.textContent = 'Send';
+                        button.disabled = false;
+                    }, 2000);
+                }
+            } catch (error) {
+                button.textContent = 'Error';
+                setTimeout(() => {
+                    button.textContent = 'Send';
+                    button.disabled = false;
+                }, 2000);
             }
-        };
-
-        // Add click event to work images
-        document.querySelectorAll('.work-image').forEach(img => {
-            img.addEventListener('click', () => {
-                openModal(img.src);
-            });
         });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                } else {
-                    // For links to index.html sections
-                    window.location.href = this.href;
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
 
