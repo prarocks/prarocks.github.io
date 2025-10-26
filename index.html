@@ -148,10 +148,6 @@
                     <a href="projects/niwr-prediction.html" class="read-more">Read More</a>
                 </div>
             </div>
-            <div id="imageModal" class="modal">
-                <span class="modal-close" onclick="closeModal()">&times;</span>
-                <img id="modalImage" class="modal-content" src="">
-            </div>
         </section>
 
         <section id="contact" class="fade-in">
@@ -166,7 +162,7 @@
                 <button type="submit" id="submit-button">Send</button>
             </form>
             <div class="contact-links">
-                <p>You can Email me at: <a href="mailto:prasanna1dahal@gmail.com">prasanna1dahal@gmail.com</a></p>
+                <p>Email: <a href="mailto:prasanna1dahal@gmail.com">prasanna1dahal@gmail.com</a></p>
                 <p><a href="https://github.com/prarocks" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/prasanna-dahal-2b2744238/" target="_blank">LinkedIn</a></p>
             </div>
         </section>
@@ -217,36 +213,6 @@
             }
         });
 
-        // Modal for image enhancement
-        function openModal(src) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modal.style.display = 'flex';
-            modalImg.src = src;
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-
-        // Close modal when clicking outside image
-        window.onclick = function(event) {
-            const modal = document.getElementById('imageModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        };
-
-        // Add click event to work images
-        document.querySelectorAll('.work-image').forEach(img => {
-            img.addEventListener('click', () => {
-                openModal(img.src);
-            });
-        });
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -283,14 +249,21 @@
 
         fadeElements.forEach(el => observer.observe(el));
 
-        // Toggle nav bar class on scroll
-        const nav = document.querySelector('nav');
+        // Sticky nav and toggle class on scroll
+        const nav = document.querySelector('.sticky-nav');
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 50) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
             }
+        });
+
+        // Hamburger menu for mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>
